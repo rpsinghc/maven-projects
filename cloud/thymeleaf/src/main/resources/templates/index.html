@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Good Thymes Virtual Grocery</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
+	<!-- <style type="text/css" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></style> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-info">
+THYMELEAF 
+</nav>
+
+<div class="container"> Welcome Messages: 
+	<div class="row">
+			<div class="col-sm">
+				<p th:text="#{index.welcome}">Welcome to our grocery store!</p>
+				<p th:utext="#{index.uwelcome}">Welcome to our grocery store!</p>
+			</div>
+			<div class="col-sm">
+				<p th:text="${#locale}"></p>
+				<p th:text="${#httpServletRequest}"></p>
+			</div>
+	</div>
+	<div class="row">
+		<div class=> Today's Date : 
+			<span  th:if="${'todayDate' instanceof T(java.util.Date)}">
+				<label  th:text="${#calendars.format(todayDate,'dd MMMM yyyy')}">Today's Date</label>
+			</span>
+			<span  th:if="${'todayDate' instanceof T(java.lang.String)}">
+				<label  th:text="${todayDate}">Today's Date</label>
+			</span>
+		</div>
+		Established locale country: <span th:text="${#locale.country}">US</span>.
+	
+		<p th:text="${(#ctx).getClass()}"></p>
+		<span th:text="${(#vars).getClass()}"></span>
+		
+
+		<form class="form-inline" action="#" th:action="@{/date}" th:object="${person}">
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1">Username</span>
+			  </div>
+			  <input type="text" class="form-control"  id="name" name="name" placeholder="Enter your Name Here." aria-label="Username" aria-describedby="basic-addon1" th:value="*{name}"></input>
+			</div>
+	
+			  <div class="form-group mx-sm-3 mb-2">
+			    <label for="date" class="sr-only">Date</label>
+			    <input type="text" class="form-control" id="date" name="date" placeholder="date" th:value="${person.date}"></input>
+			  </div>
+			  <button type="submit" class="btn btn-primary mb-2">Send Date</button>
+		</form>
+	
+	</div>
+</div>
+
+<!-- <div class="container">
+	<div style="display: table;">
+	    <div th:each="name : ${(#ctx).getVariableNames()}"style="display: table-row;border-bottom-style: solid;border-bottom-color: white;" >
+	      	<div th:text="${name}" style="display: table-cell;  width: 20%;" class="d-inline p-2">Context Name</div>
+			<div th:text="${(#ctx).getVariable(name)}" style="display: table-cell;" >Context Value</div>
+	    </div>
+	</div>
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+	 <script type="text/javascript" scr="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
