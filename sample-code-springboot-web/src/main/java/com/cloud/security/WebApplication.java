@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class SecurityApplication {
+public class WebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SecurityApplication.class, args);
+		SpringApplication.run(WebApplication.class, args);
 	}
 	
 	@RequestMapping(value="/*",produces=MediaType.APPLICATION_JSON_VALUE)

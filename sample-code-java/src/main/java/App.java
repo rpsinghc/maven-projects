@@ -1,4 +1,4 @@
-package $com.rpsinghk;
+package com.rpsinghk;
 
 /**
  * Hello world!

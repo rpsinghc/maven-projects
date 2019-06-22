@@ -1,4 +1,4 @@
-package $com.rpsinghk;
+package com.rpsinghk;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
