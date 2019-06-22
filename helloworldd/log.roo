@@ -1,0 +1,12 @@
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-02-27 19:36:31
+hint
+project setup --topLevelPackage com.springsource.roo.pizzashop
+!os cd
+!os pwd
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+web mvc setup
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-02-27 19:52:20
+help web mvc view setup
+help web mvc view setup responseType
+help web mvc view setup
+help web mvc view setup

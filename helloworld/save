@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modelarea>
+<components>
+<atomicstate id="2">
+<name>Start</name>
+<size>136,54</size>
+<pos>192,115</pos>
+<inner_transitions/>
+<regions/>
+</atomicstate>
+<atomicstate id="3">
+<name>Running</name>
+<size>162,62</size>
+<pos>621,116</pos>
+<inner_transitions/>
+<regions/>
+</atomicstate>
+<atomicstate id="6">
+<name>Stop</name>
+<size>207,65</size>
+<pos>637,336</pos>
+<inner_transitions/>
+<regions/>
+</atomicstate>
+</components>
+<transitions>
+<labeledtransition id="4">
+<src>2</src>
+<dest>3</dest>
+<points/>
+<lines>
+<line id="5">
+<points>318,141,631,141</points>
+<source>2</source>
+<destination>3</destination>
+</line>
+</lines>
+<trigger>
+<text>calculate</text>
+<pos>437,146</pos>
+</trigger>
+</labeledtransition>
+<labeledtransition id="7">
+<src>3</src>
+<dest>6</dest>
+<points/>
+<lines>
+<line id="8">
+<points>752,168,752,346</points>
+<source>3</source>
+<destination>6</destination>
+</line>
+</lines>
+<trigger>
+<text>stop</text>
+<pos>725,262</pos>
+</trigger>
+</labeledtransition>
+</transitions>
+</modelarea>
